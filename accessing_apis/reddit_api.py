@@ -3,7 +3,7 @@
 import os
 from dotenv import load_dotenv
 import praw
-load_dotenv()
+load_dotenv(override=True)
 
 
 reddit = praw.Reddit(client_id=os.getenv('reddit_personal_use'),
@@ -13,12 +13,12 @@ reddit = praw.Reddit(client_id=os.getenv('reddit_personal_use'),
                      password=os.getenv('reddit_pw'))
 
 print(reddit.user.me())
-
-subreddit = reddit.subreddit('Coronavirus')
-top_subreddit = subreddit.top()
+subreddit = reddit.subreddit("Coronavirus").top("week")
+# subreddit = reddit.subreddit('Coronavirus')
+# top_subreddit = subreddit.top()
 top_subreddit = subreddit.top(limit=10)
 
-for submission in subreddit.top(limit=1):
+for submission in subreddit.top(limit=20):
     print(submission.title, submission.id)
 
 for submission in top_subreddit:

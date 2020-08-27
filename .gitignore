@@ -1,3 +1,6 @@
 /data
 /env
 /.env
+/.idea
+/.spyproject
+*.iml

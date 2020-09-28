@@ -4,4 +4,4 @@
 /.idea
 /.spyproject
 *.iml
-/.DS_Store
+.DS_Store

@@ -1,1 +1,7 @@
 /data
+/env
+/.env
+/.idea
+/.spyproject
+*.iml
+.DS_Store
